@@ -35,5 +35,10 @@ public class DecimalCollection {
         this.validateIsNullOrEmpty();
         return Collections.max(this.collection);
     }
+
+    public double lower() {
+        this.validateIsNullOrEmpty();
+        return Collections.min(this.collection);
+    }
 }
 
