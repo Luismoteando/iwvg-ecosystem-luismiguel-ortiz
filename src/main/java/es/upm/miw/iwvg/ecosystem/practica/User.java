@@ -22,6 +22,10 @@ public class User {
         return this.name + " " + this.familyName;
     }
 
+    public String upperCaseFullName() {
+        return this.fullName().toUpperCase();
+    }
+
     public String initials() {
         return this.name.substring(0, 1) + ".";
     }
