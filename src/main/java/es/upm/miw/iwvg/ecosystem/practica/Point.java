@@ -42,4 +42,7 @@ public class Point {
                 ", y=" + y +
                 "}";
     }
+
+    public void translateOrigin(Point point) {
+    }
 }
