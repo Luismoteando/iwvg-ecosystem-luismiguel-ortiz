@@ -27,6 +27,11 @@ public class Point {
         return Math.atan((double) this.y / this.x);
     }
 
+    public void translateOrigin(Point origin) {
+        this.x -= origin.getX();
+        this.y -= origin.getY();
+    }
+
     public int getX() {
         return this.x;
     }
@@ -41,8 +46,5 @@ public class Point {
                 "x=" + x +
                 ", y=" + y +
                 "}";
-    }
-
-    public void translateOrigin(Point point) {
     }
 }
