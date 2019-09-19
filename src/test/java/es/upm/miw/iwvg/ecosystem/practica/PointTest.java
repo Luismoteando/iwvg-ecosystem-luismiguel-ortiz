@@ -65,4 +65,14 @@ class PointTest {
         assertEquals(2, point.getY());
         assertEquals(2, point.getZ());
     }
+
+    @Test
+    void testSetters() {
+        point.setX(4);
+        point.setY(2);
+        point.setZ(1);
+        assertEquals(4, point.getX());
+        assertEquals(2, point.getY());
+        assertEquals(1, point.getZ());
+    }
 }
