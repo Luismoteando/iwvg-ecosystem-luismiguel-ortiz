@@ -45,4 +45,11 @@ public class FractionTest {
         assertTrue(fraction.isEquivalent(new Fraction(20, 8)));
         assertFalse(fraction.isEquivalent(new Fraction(8, 20)));
     }
+
+    @Test
+    void testMultiply() {
+        Fraction result = fraction.multiply(new Fraction(4, 5));
+        assertEquals(40, result.getNumerator());
+        assertEquals(20, result.getDenominator());
+    }
 }
