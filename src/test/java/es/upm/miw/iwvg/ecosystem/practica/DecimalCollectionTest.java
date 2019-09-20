@@ -43,6 +43,17 @@ public class DecimalCollectionTest {
     }
 
     @Test
+    void testMean() {
+        assertEquals(1.5, this.decimalCollection.mean(), 10e-5);
+    }
+
+    @Test
+    void testSMeanArithmeticExceptionIfEmpty() {
+        ArithmeticException exception = assertThrows(ArithmeticException.class, () -> new DecimalCollection().mean());
+        LogManager.getLogger(this.getClass()).debug(exception.getMessage());
+    }
+
+    @Test
     void testHigher() {
         assertEquals(3.0, this.decimalCollection.higher(), 10e-5);
     }
@@ -50,5 +61,15 @@ public class DecimalCollectionTest {
     @Test
     void testHigherArithmeticExceptionIfEmpty() {
         assertThrows(ArithmeticException.class, () -> new DecimalCollection().higher());
+    }
+
+    @Test
+    void testLower() {
+        assertEquals(-1.0, this.decimalCollection.lower(), 10e-5);
+    }
+
+    @Test
+    void testLowerArithmeticExceptionIfEmpty() {
+        assertThrows(ArithmeticException.class, () -> new DecimalCollection().lower());
     }
 }
