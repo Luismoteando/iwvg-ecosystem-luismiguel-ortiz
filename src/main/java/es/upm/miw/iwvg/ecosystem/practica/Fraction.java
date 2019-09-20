@@ -19,6 +19,14 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
+    public boolean isProper() {
+        if (this.numerator < this.denominator) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public int getNumerator() {
         return numerator;
     }

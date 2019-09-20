@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FractionTest {
 
@@ -31,5 +32,12 @@ public class FractionTest {
     @Test
     void testDecimal() {
         assertEquals(2.5, fraction.decimal());
+    }
+
+    @Test
+    void testIsProper() {
+        assertTrue(!fraction.isProper());
+        fraction = new Fraction(4, 10);
+        assertTrue(fraction.isProper());
     }
 }
