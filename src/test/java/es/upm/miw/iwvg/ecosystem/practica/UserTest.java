@@ -10,24 +10,30 @@ class UserTest {
 
     @BeforeEach
     void before() {
-        user = new User(23, "luis", "ortiz");
+        user = new User(23, "luis", "miguel", "ortiz");
     }
 
     @Test
     void testUser() {
-        user = new User(23, "luis", "ortiz");
+        user = new User(23, "luis", "miguel", "ortiz");
         assertEquals(23, user.getNumber());
-        assertEquals("Luis", user.getName());
+        assertEquals("Luis", user.getFirstName());
+        assertEquals("Miguel", user.getSecondName());
         assertEquals("Ortiz", user.getFamilyName());
     }
 
     @Test
     void testFullName() {
-        assertEquals("Luis Ortiz", user.fullName());
+        assertEquals("Luis Miguel Ortiz", user.fullName());
+    }
+
+    @Test
+    void testUpperCaseFullName() {
+        assertEquals("LUIS MIGUEL ORTIZ", user.upperCaseFullName());
     }
 
     @Test
     void testInitials() {
-        assertEquals("L.", user.initials());
+        assertEquals("L.M.", user.initials());
     }
 }
