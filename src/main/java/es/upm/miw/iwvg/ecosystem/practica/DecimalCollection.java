@@ -25,6 +25,11 @@ public class DecimalCollection {
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
     }
 
+    public double mean() {
+        this.validateIsNullOrEmpty();
+        return this.sum() / this.size();
+    }
+
     private void validateIsNullOrEmpty() {
         if ((this.collection == null) || this.collection.isEmpty()) {
             throw new ArithmeticException("Null or Empty collection");
