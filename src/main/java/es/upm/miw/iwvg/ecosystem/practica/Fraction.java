@@ -27,6 +27,14 @@ public class Fraction {
         }
     }
 
+    public boolean isEquivalent(Fraction fraction) {
+        if (this.numerator / this.denominator == fraction.numerator / fraction.denominator) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public int getNumerator() {
         return numerator;
     }
